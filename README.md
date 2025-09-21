@@ -20,12 +20,30 @@ n AI-powered Resume Parser built with FastAPI and Google Gemini. It extracts str
 > python-multipart
 
 # Setup & Installation
+
 # 1.Create and activate a virtual environment
-  > Windows
-> syntax: python -m venv venv
-venv\Scripts\activate
-  > Mac/Linux
-> 
+
+  # > Windows:
+ python -m venv venv
+  # > Mac/Linux
+ python3 -m venv venv
+
+# 2.Install dependencies
+pip install fastapi uvicorn pdfplumber python-docx google-generativeai python-multipart
+
+# 3 Configure your Gemini AI API Key
+Open app.py and replace:
+
+# Run the App
+uvicorn app:app --reload
+
+Open your browser at: http://127.0.0.1:8000/docs
+
+Use the POST /parse_resume/ endpoint to upload PDF/DOCX resumes and get JSON output.
+
+
+
+
   
 
 
